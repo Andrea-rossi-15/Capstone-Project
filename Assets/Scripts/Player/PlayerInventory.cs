@@ -13,10 +13,7 @@ public class PlayerInventory : MonoBehaviour
 
     private int currentWeaponIndex = -1;
 
-    /// <summary>
-    /// Aggiunge un'arma all'inventario, oppure aggiunge munizioni se già presente.
-    /// Ritorna true se il pickup è stato consumato (arma nuova o munizioni aggiunte), false se munizioni già al massimo.
-    /// </summary>
+
     public bool AddWeapon(SO_Weapone newWeapon)
     {
         if (newWeapon == null) return false;
@@ -47,6 +44,13 @@ public class PlayerInventory : MonoBehaviour
 
         int ammo = currentAmmo.ContainsKey(weapon) ? currentAmmo[weapon] : 0;
         // TODO: qui potrai aggiungere la logica di equip (aggiornare sprite, stats, UI ecc.)
+
+        PlayerUI playerUI = FindObjectOfType<PlayerUI>();
+        if (playerUI != null)
+        {
+            playerUI.SetCurrentWeapone(weapon);
+            playerUI.SetCurrentBullet(weapon, this);
+        }
     }
 
     public SO_Weapone GetCurrentWeapon()
@@ -66,9 +70,6 @@ public class PlayerInventory : MonoBehaviour
         EquipWeapon(weapons[currentWeaponIndex]);
     }
 
-    /// <summary>
-    /// Aggiunge munizioni all'arma specificata. Ritorna true se sono state aggiunte munizioni.
-    /// </summary>
     private bool AddAmmoToWeapon(SO_Weapone weapon)
     {
         if (!currentAmmo.ContainsKey(weapon))

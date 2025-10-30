@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class PlayerUI : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerUI : MonoBehaviour
     private PlayerLifeController _playerDamage;
 
     [SerializeField] Image _weaponeImage;
+    [SerializeField] TextMeshProUGUI _currentBullet;
 
 
     // Start is called before the first frame update
@@ -38,5 +40,19 @@ public class PlayerUI : MonoBehaviour
     public void SetCurrentWeapone(SO_Weapone currentWeapon)
     {
         _weaponeImage.sprite = currentWeapon != null ? currentWeapon.WeaponeSprite : null;
+    }
+    public void SetCurrentBullet(SO_Weapone _currentWeapon, PlayerInventory _inventory)
+    {
+        {
+            if (_currentWeapon == null || _inventory == null)
+            {
+                _currentBullet.text = "0";
+                return;
+            }
+
+            int _ammo = _inventory.GetCurrentAmmo(_currentWeapon);
+            _currentBullet.text = _ammo.ToString();
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BoxController : MonoBehaviour
@@ -14,7 +15,7 @@ public class BoxController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void SpawnRandomWeapon()
+    public void SpawnRandomWeapon()
     {
         if (_weaponPrefabs.Length == 0) return;
 

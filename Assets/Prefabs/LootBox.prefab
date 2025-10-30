@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3069197188038698991}
   - component: {fileID: -5880493727698868616}
   - component: {fileID: -9038902944608226001}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LootBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

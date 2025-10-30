@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundList:
-  - {fileID: 8300000, guid: 65d30cde7ec50e6489b8c2d542d50b15, type: 3}
+  - {fileID: 0}
   - {fileID: 8300000, guid: 2c71374916b02d241b02ea70809bca5a, type: 3}
   - {fileID: 8300000, guid: 513b2b54a739b4243af56f6fd1419b69, type: 3}
   - {fileID: 8300000, guid: a236ed6ed1165ca44908f0cfe8c7ed65, type: 3}
@@ -28886,9 +28886,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 197323666344639594, guid: 7acbd268713bd4b3aa81a8a25b4e2f8b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 197323666344639594, guid: 7acbd268713bd4b3aa81a8a25b4e2f8b, type: 3}
       propertyPath: _weaponeImage
       value: 
       objectReference: {fileID: 483898086}
+    - target: {fileID: 197323666344639594, guid: 7acbd268713bd4b3aa81a8a25b4e2f8b, type: 3}
+      propertyPath: _currentBullet
+      value: 
+      objectReference: {fileID: 766734843}
     - target: {fileID: 197323666344639594, guid: 7acbd268713bd4b3aa81a8a25b4e2f8b, type: 3}
       propertyPath: _playerLifeBar
       value: 
@@ -28944,6 +28952,14 @@ PrefabInstance:
     - target: {fileID: 4480744014037651721, guid: 7acbd268713bd4b3aa81a8a25b4e2f8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5418542927555095587, guid: 7acbd268713bd4b3aa81a8a25b4e2f8b, type: 3}
+      propertyPath: _lootboxes
+      value: 
+      objectReference: {fileID: 1447864291171947434, guid: 999c69105360b44d8af835c5b3caf1e4, type: 3}
+    - target: {fileID: 5418542927555095587, guid: 7acbd268713bd4b3aa81a8a25b4e2f8b, type: 3}
+      propertyPath: _lootBoxLayer.m_Bits
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

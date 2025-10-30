@@ -12,6 +12,7 @@ public class PlayerAttacking : MonoBehaviour
 
     [SerializeField] Transform _attackPoint;
     [SerializeField] LayerMask _enemyLayer;
+    [SerializeField] LayerMask _lootBoxLayer;
 
 
 
@@ -44,10 +45,20 @@ public class PlayerAttacking : MonoBehaviour
     }
     public void DealDamage()//Serve per i keyframe
     {
-        Collider2D[] _enemieInRange = Physics2D.OverlapCircleAll(_attackPoint.position, _playerData.PlayerWeaponeRange, _enemyLayer);
-        if (_enemieInRange.Length > 0)
+        Collider2D[] collidersInRange = Physics2D.OverlapCircleAll(_attackPoint.position, _playerData.PlayerWeaponeRange);
+        foreach (Collider2D collider in collidersInRange)
         {
-            _enemieInRange[0].GetComponent<EnemyBaseDamageController>().EnemyTakeDamage(_playerData.PlayerKnifeDamage);
+            EnemyBaseDamageController enemy = collider.GetComponent<EnemyBaseDamageController>();
+            if (enemy != null)
+            {
+                enemy.EnemyTakeDamage(_playerData.PlayerKnifeDamage);
+            }
+            BoxController lootBox = collider.GetComponent<BoxController>();
+            if (lootBox != null)
+            {
+                Destroy(lootBox.gameObject);
+                lootBox.SpawnRandomWeapon();
+            }
         }
     }
     public void StopAttacking()
