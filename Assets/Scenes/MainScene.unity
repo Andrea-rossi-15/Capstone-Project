@@ -2147,7 +2147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.026354292, y: 0.027548442}
   m_AnchorMax: {x: 0.97364575, y: 1}
-  m_AnchoredPosition: {x: -1.7, y: -6.6604}
+  m_AnchoredPosition: {x: -1.7000122, y: -6.6604004}
   m_SizeDelta: {x: -44.1046, y: -63.6602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &283771606
@@ -22979,6 +22979,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1574470526}
     m_Modifications:
+    - target: {fileID: 2381797991791235611, guid: d25857e9ebbac4da09f3ab41ae42e259, type: 3}
+      propertyPath: _radius
+      value: 22.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2716785449672526794, guid: d25857e9ebbac4da09f3ab41ae42e259, type: 3}
       propertyPath: m_Name
       value: EnemyType3 (1)
@@ -25846,6 +25850,10 @@ PrefabInstance:
       value: 359.7
       objectReference: {fileID: 0}
     - target: {fileID: 2381797991791235611, guid: a4ac8f9bceec14adcad25ff0760843e7, type: 3}
+      propertyPath: _radius
+      value: 13.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2381797991791235611, guid: a4ac8f9bceec14adcad25ff0760843e7, type: 3}
       propertyPath: _playerRef
       value: 
       objectReference: {fileID: 399314740}
@@ -26507,7 +26515,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2381797991791235611, guid: a4ac8f9bceec14adcad25ff0760843e7, type: 3}
       propertyPath: _angle
-      value: 38.1
+      value: 28.5
       objectReference: {fileID: 0}
     - target: {fileID: 2381797991791235611, guid: a4ac8f9bceec14adcad25ff0760843e7, type: 3}
       propertyPath: _radius

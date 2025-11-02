@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.XR;
 
-[CustomEditor(typeof(EnemyConeVision))]
 public class EnemyFOVeditor : Editor
 {
     private void OnSceneGUI()
